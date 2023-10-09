@@ -1,0 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap");
+
+.new {
+  background-color: hsl(240, 100%, 5%);
+  border: 1px solid black;
+}
+
+.new > h1 {
+  color: hsl(35, 77%, 62%);
+}
