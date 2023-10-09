@@ -11,10 +11,10 @@ export default function Navbar() {
 
   return (
     <>
-      <div className={style.overlay}></div>
+      {isActive ? <div className= {style.overlay}></div> : null}
       <div className={style["nav-bar"]}>
         <img src={logo} alt="Website logo"></img>
-        <nav>
+        <nav style={{right: isActive ? "0%" : "-60%"}>
           <a href="src\index.js">Home</a>
           <a href=".new-arrivals">New</a>
           <a href=".popular-articles">Popular</a>
@@ -25,7 +25,7 @@ export default function Navbar() {
             Categories
           </a>
         </nav>
-        <div className={style.hamburger} onClick={handleClick}>
+        <div className={style.hamburger + " " + `${isActive ? style.hamburger.active : ""}}} onClick={handleClick}`>
           <span className={style["bar"]}></span>
           <span className={style["bar"]}></span>
           <span className={style["bar"]}></span>
