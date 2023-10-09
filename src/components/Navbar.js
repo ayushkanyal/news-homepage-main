@@ -6,15 +6,19 @@ export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
 
   function handleClick() {
-    setIsActive(true);
+    if (!isActive) {
+      setIsActive(true);
+    } else {
+      setIsActive(false);
+    }
   }
 
   return (
     <>
-      {isActive ? <div className= {style.overlay}></div> : null}
+      {isActive ? <div className={style.overlay}></div> : null}
       <div className={style["nav-bar"]}>
         <img src={logo} alt="Website logo"></img>
-        <nav style={{right: isActive ? "0%" : "-60%"}>
+        <nav style={{ right: isActive ? "0%" : "-60%" }}>
           <a href="src\index.js">Home</a>
           <a href=".new-arrivals">New</a>
           <a href=".popular-articles">Popular</a>
@@ -25,7 +29,12 @@ export default function Navbar() {
             Categories
           </a>
         </nav>
-        <div className={style.hamburger + " " + `${isActive ? style.hamburger.active : ""}}} onClick={handleClick}`>
+        <div
+          className={
+            `${style["hamburger"]}` + " " + `${isActive ? style["active"] : ""}`
+          }
+          onClick={handleClick}
+        >
           <span className={style["bar"]}></span>
           <span className={style["bar"]}></span>
           <span className={style["bar"]}></span>
