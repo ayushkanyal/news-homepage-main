@@ -1,17 +1,39 @@
-.popular > article{
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 2.5fr;
-    margin-bottom: 20px;
+.popular > article {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2.5fr;
+  margin-bottom: 20px;
 }
 
-.popular > article > img{
-    height: 160px;
-    width: 120px;
-    grid-column-start: 1;
-    grid-column-end: 2;
+.popular > article > img {
+  height: 160px;
+  width: 120px;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 
-.text-content{
-    text-align: left;
+.text-content {
+  text-align: left;
+}
+
+.text-content > h2 {
+  font-size: 40px;
+  position: relative;
+  top: -10px;
+  margin: 0px;
+  padding: 0px;
+  color: hsl(233, 8%, 79%);
+}
+
+.text-content > h4 {
+  margin: 0px;
+  padding: 0px;
+  font-size: 20px;
+  font-weight: 750;
+}
+
+.text-content > p {
+  color: hsl(236, 13%, 42%);
+  font-weight: 600;
+  font-size: 15px;
 }
