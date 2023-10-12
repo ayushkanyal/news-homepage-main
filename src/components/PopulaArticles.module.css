@@ -1,0 +1,17 @@
+.popular > article{
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 2.5fr;
+    margin-bottom: 20px;
+}
+
+.popular > article > img{
+    height: 160px;
+    width: 120px;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.text-content{
+    text-align: left;
+}
