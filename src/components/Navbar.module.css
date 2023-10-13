@@ -25,7 +25,8 @@
 
 nav {
   display: flex;
-  gap: 10px;
+  right: 3%;
+  gap: 20px;
   position: fixed;
 }
 
@@ -34,6 +35,11 @@ a {
   font-size: 14px;
   font-weight: 500;
   color: hsl(240, 100%, 5%);
+}
+
+a:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
 }
 
 .hamburger {
@@ -50,6 +56,8 @@ a {
   margin: 3px;
 }
 
+/* Additional CSS settings for Mobile View */
+
 @media (max-width: 376px) {
   nav {
     gap: 20px;
@@ -64,6 +72,11 @@ a {
     padding-left: 20px;
     transition: 0.3s;
     z-index: 11;
+    right: -60%;
+  }
+
+  .nav_active {
+    right: 0%;
   }
 
   .hamburger {
@@ -80,6 +93,22 @@ a {
   }
 
   .active .bar:nth-child(3) {
-    transform: translateY(3px) rotate(-45deg);
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+
+/* CSS settings for Desktop view */
+
+@media (min-width: 376px) {
+  .nav-bar {
+    padding: 3% 2%;
+    position: sticky;
+    top: 0;
+    background-color: white;
+  }
+
+  a {
+    color: hsl(236, 13%, 42%);
+    font-size: 14px;
   }
 }
