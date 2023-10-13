@@ -4,11 +4,14 @@ import { useState } from "react";
 
 export default function Navbar() {
   const [isActive, setIsActive] = useState(false);
+  const [navClass, setNavClass] = useState(null);
 
   function handleClick() {
     if (!isActive) {
+      setNavClass("nav_active");
       setIsActive(true);
     } else {
+      setNavClass(null);
       setIsActive(false);
     }
   }
@@ -18,7 +21,7 @@ export default function Navbar() {
       {isActive ? <div className={style.overlay}></div> : null}
       <div className={style["nav-bar"]}>
         <img src={logo} alt="Website logo"></img>
-        <nav style={{ right: isActive ? "0%" : "-60%" }}>
+        <nav className={style[navClass]}>
           <a href="src\index.js">Home</a>
           <a href=".new-arrivals">New</a>
           <a href=".popular-articles">Popular</a>
