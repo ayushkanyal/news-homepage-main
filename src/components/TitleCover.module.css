@@ -5,9 +5,9 @@
   text-align: left;
 }
 
-.cover > img {
+.cover > picture > img {
   width: 100%;
-  height: 45vh;
+  height: 65vh;
   object-fit: cover;
 }
 
@@ -28,14 +28,42 @@
 }
 
 .cover > button {
-    font-family: "Inter", sans-serif;
-    font-weight: 200;
-    font-size: 16px;
-    color: white;
-    background-color: hsl(5, 85%, 63%);
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    border: none;
-    padding: 4%;
-    width: 48%;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  font-size: 16px;
+  color: white;
+  background-color: hsl(5, 85%, 63%);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  border: none;
+  padding: 4%;
+  width: 48%;
+}
+
+@media (min-width: 376px) {
+  .cover {
+    margin-top: 0vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 3.5fr 2fr;
+  }
+
+  .cover > picture {
+    grid-column: 1 / span 2;
+  }
+
+  .cover > h1 {
+    grid-row: 2 / span 1;
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .cover > p {
+    grid-row-start: 2/ span 0.25;
+  }
+
+  .cover > button{
+    grid-column-start: 2;
+    margin-top: -40px;
+  }
 }
