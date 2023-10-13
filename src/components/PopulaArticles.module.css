@@ -32,6 +32,11 @@
   font-weight: 750;
 }
 
+.text-content > h4:hover {
+  color: hsl(5, 85%, 63%);
+  cursor: pointer;
+}
+
 .text-content > p {
   color: hsl(236, 13%, 42%);
   font-weight: 600;
