@@ -42,3 +42,49 @@
   font-weight: 600;
   font-size: 15px;
 }
+
+@media (min-width: 376px) {
+  .popular {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 5%;
+    align-items: center;
+  }
+
+  .popular > article > img {
+    height: 110px;
+    width: 90px;
+    margin-top: -7px;
+  }
+
+  .popular > article {
+    gap: 10px;
+  }
+
+  .text-content{
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .text-content:not(:first-child){
+    line-height: 20px;
+  }
+
+  .text-content > h2 {
+    font-size: 25px;
+    margin-bottom: 0px;
+    font-weight: 600;
+  }
+
+  .text-content > h4 {
+    font-size: 16px;
+    margin-top: 0px;
+    white-space: nowrap;
+  }
+
+  .text-content > p {
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+  }
+}
