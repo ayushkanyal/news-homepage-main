@@ -20,14 +20,14 @@
   width: 80%;
 }
 
-.cover > p {
+.grid_container > p {
   color: hsl(236, 13%, 42%);
   font-weight: 600;
   width: 90%;
   margin-left: 5px;
 }
 
-.cover > button {
+.grid_container > button {
   font-family: "Inter", sans-serif;
   font-weight: 200;
   font-size: 16px;
@@ -54,17 +54,24 @@
 
   .cover > h1 {
     grid-row: 2 / span 1;
+    font-weight: 750;
     font-size: 48px;
-    line-height: 50px;
+    line-height: 55px;
+    align-self: flex-start;
   }
 
-  .cover > p {
-    grid-row-start: 2/ span 0.25;
-    font-size: 18px;
+  .grid_container {
+    grid-row-start: 2/ span 1;
+    font-size: 15px;
   }
 
-  .cover > button{
-    grid-column-start: 2;
-    margin-top: -10px;
+  .grid_container > p{
+    align-self: flex-start;
+    margin-bottom: 40px;
+  }
+
+  .grid_container > button{
+    margin-bottom: -10%;
+    align-self: flex-end;
   }
 }
