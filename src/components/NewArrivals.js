@@ -1,5 +1,6 @@
 import styles from "./NewArrivals.module.css";
 
+
 export default function NewArrivals() {
   return (
     <>
