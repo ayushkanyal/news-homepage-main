@@ -5,7 +5,6 @@ import NewArrivals from "./components/NewArrivals";
 import PopulaArticles from "./components/PopularArticles";
 function App() {
   return (
-
     <div className="App">
       <Navbar />
       <main>
